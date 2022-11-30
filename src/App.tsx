@@ -1,26 +1,27 @@
+import { Button, TextField } from "@mui/material";
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const variant = "contained";
+    const label = "Edit me please!";
+    return (
+        <>
+            <h1>React Basic</h1>
+            <div style={{marginBottom: "10px"}}>
+                <Button variant={variant} onClick={() => alert("click")}>
+                    Im React Material button!
+                </Button>
+            </div>
+            <div>
+                <TextField label={label}></TextField>
+                <a href={"https://mui.com/material-ui/react-text-field/#basic-textfield"}
+                   target={"_blank"}>
+                    MUI doc
+                </a>
+            </div>
+        </>
+    );
 }
 
 export default App;
